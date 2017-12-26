@@ -1,6 +1,6 @@
 var socket = io();
 
-function scrollToBottom () {
+function scrollToBottom() {
     //Selectors
     var messages = jQuery('#messages');
     var newMessage = messages.children('li:last-child');
@@ -14,7 +14,7 @@ function scrollToBottom () {
     if (clientHeight + scrollTop + newMessageHeight + lastMessageHeight >= scrollHeight) {
         messages.scrollTop(scrollHeight);
     }
-};  
+};
 
 socket.on('connect', function () {
     console.log('Connected to server!');
